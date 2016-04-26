@@ -4,6 +4,7 @@ import notify from 'gulp-notify'
 import stylus from 'gulp-stylus'
 import postcss from 'gulp-postcss'
 import use from 'postcss-use'
+import sync from 'browser-sync'
 import watch from 'gulp-watch'
 import {src, dest} from '../places'
 
@@ -21,6 +22,7 @@ gulp.task('css', () =>
 		}))
 		.pipe(postcss([use({modules: '*'})]))
 		.pipe(gulp.dest(dest))
+		.pipe(sync.stream())
 )
 
 gulp.task('css:watch', () =>

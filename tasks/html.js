@@ -12,5 +12,5 @@ gulp.task('html', () =>
 )
 
 gulp.task('html:watch', () =>
-	watch(`${src}/index.html`, () => gulp.start('html'))
+	watch(`${src}/index.pug`, () => gulp.start('html'))
 )

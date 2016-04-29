@@ -1,0 +1,9 @@
+_island($opts = {})
+	$opts = assign({
+		size: 'unit'
+	}, $opts)
+
+	padding: $spacing[$opts.size]
+
+	> :not(:last-child)
+		margin-bottom: $spacing[$opts.size]
